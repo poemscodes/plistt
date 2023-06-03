@@ -1,6 +1,6 @@
 [package]
 name = "plistt"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Gabriel FD Moura <gabriel@poems.codes>"]
 description = "plist transcoder to json"

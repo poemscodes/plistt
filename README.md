@@ -21,7 +21,7 @@ Click to show Cargo.toml.
 ```toml
 [dependencies]
 
-plistt = { version = "0.1.0" }
+plistt = { version = "0.1.1" }
 ```
 
 </details>
