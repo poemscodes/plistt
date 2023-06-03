@@ -6,6 +6,8 @@ authors = ["Gabriel FD Moura <gabriel@poems.codes>"]
 description = "plist transcoder to json"
 documentation = "https://docs.rs/plistt"
 readme = "README.md"
+license = "MIT"
+license-file = "LICENSE-MIT"
 
 [dependencies]
 clap = { version = "4.3.1", features = ["env", "derive", "cargo", "wrap_help"] }
