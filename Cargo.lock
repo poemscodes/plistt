@@ -251,7 +251,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "plist-tf"
+name = "plistt"
 version = "0.1.0"
 dependencies = [
  "clap",

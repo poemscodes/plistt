@@ -1,5 +1,5 @@
 use clap::{Parser, Subcommand};
-use plist_modem::json;
+use plistt::json;
 
 #[derive(Parser)]
 #[command(author, version, about, long_about = None)]

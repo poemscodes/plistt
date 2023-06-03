@@ -1,10 +1,10 @@
 use plist::{Value};
-use seek_bufread::BufReader;
+use crate::BufReader;
 use serde::ser::Serialize;
 use serde_json as json;
 use serde_json::ser::CompactFormatter as CompactFormatterJSON;
 use std::fs::OpenOptions;
-use std::io::BufWriter;
+use crate::BufWriter;
 use std::io::{Read, Write};
 use std::path::Path;
 

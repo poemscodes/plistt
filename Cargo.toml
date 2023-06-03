@@ -1,9 +1,11 @@
 [package]
-name = "plist-tf"
+name = "plistt"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["Gabriel FD Moura <gabriel@poems.codes>"]
+description = "plist transcoder to json"
+documentation = "https://docs.rs/plistt"
+readme = "README.md"
 
 [dependencies]
 clap = { version = "4.3.1", features = ["env", "derive", "cargo", "wrap_help"] }
@@ -12,10 +14,8 @@ seek_bufread = "1.2.2"
 serde = { version = "1.0.163", features = ["derive", "rc", "alloc"] }
 serde_json = { version = "1.0.96", features = ["alloc", "raw_value", "unbounded_depth", "preserve_order"] }
 
-
-
 [lib]
-name = "plist_modem"
+name = "plistt"
 path = "src/modem/mod.rs"
 
 [[bin]]

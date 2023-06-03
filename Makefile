@@ -3,7 +3,7 @@ PLIST_DEBUG_BIN		:=target/debug/plist
 PLIST_RELEASE_BIN	:=target/release/plist
 PLIST_BIN		:=$(PLIST_DEBUG_BIN)
 
-all: test debug release
+all: test debug release examples
 
 $(INSTALL_PATH):
 	mkdir -p $@
@@ -14,8 +14,11 @@ $(PLIST_RELEASE_BIN): $(INSTALL_PATH)
 $(PLIST_DEBUG_BIN): $(INSTALL_PATH)
 	cargo build
 
-.PHONY: all clean cls release debug fix fmt check build test
+.PHONY: all clean cls release debug fix fmt check build test examples
 
+
+examples:
+	cargo build --examples
 
 release: check fix | $(PLIST_RELEASE_BIN)
 	install $(PLIST_RELEASE_BIN) $(INSTALL_PATH)
