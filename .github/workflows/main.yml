@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build_release:
+    name: Build Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: build release
+        uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release
+
+  run_examples:
+    name: Run Examples
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: List USB Devices on a Mac
+        uses: actions-rs/cargo@v1
+        with:
+          command: ioreg
+          args: --example ioreg
